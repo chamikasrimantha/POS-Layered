@@ -4,7 +4,9 @@
  */
 package supermarketlayered.service.custom;
 
+import supermarketlayered.dto.CustomerDto;
 import supermarketlayered.service.SuperService;
+import java.util.ArrayList;
 
 /**
  *
@@ -12,4 +14,11 @@ import supermarketlayered.service.SuperService;
  */
 public interface CustomerService extends SuperService{
     
+    public String addCustomer(CustomerDto customerDto) throws Exception;
+    
+    public ArrayList<CustomerDto> getAllCustomer() throws Exception;
+
+    public CustomerDto searchCustomer(String custId) throws Exception;
+    
+    CustomerDto getCustomer(String id) throws Exception;
 }
